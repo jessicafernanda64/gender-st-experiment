@@ -1,0 +1,133 @@
+<!--comentar-->
+
+<div layout-padding>
+    <div layout="row" layout-align="center center">
+        <md-card layout="column" layout-align="center center" flex="auto" width="50%">
+            <md-toolbar layout="row" layout-align="center center" layout-padding class="md-primary md-hue-2">
+                <label> Questionário Socioeconômico</label>
+            </md-toolbar>
+        </md-card>
+    </div>
+    <div layout="column" layout-align="left left">
+        <md-card layout="column" layout-align="left center" flex="auto" width="80%"></md-card>
+        <md-card-title>
+            <p> Para finalizar, responda as perguntas abaixo marcando as alternativas que melhor se adequem ao seu
+                perfil socioeconômico.</p>
+        </md-card-title>
+
+        <div layout="row">
+            <md-input-container class="block" flex-gt-sm>
+                <label>Nome</label>
+                <input type="text" name="name" ng-required="true" ng-model="name">
+            </md-input-container>
+
+            <md-input-container class="block" flex-gt-sm>
+                <label>Idade</label>
+                <input type="number" name="age" ng-required="true" ng-model="age">
+            </md-input-container>
+
+            <md-input-container class="block" flex-gt-sm>
+                <label>Estado civil</label>
+                <md-select ng-required="true" ng-model="civilState">
+                    <md-option
+                        ng-repeat="g in ['Solteiro(a)','Casado(a)', 'União estável', 'Divorciado(a)','Viúvo', 'Prefiro não Responder']">
+                        {{g}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <md-input-container class="block" flex-gt-sm>
+                <label>Etnia</label>
+                <md-select ng-required="true" ng-model="ethnicity">
+                    <md-option ng-repeat="g in ['Pardo','Negro', 'Branco', 'Indígenas', 'Prefiro não Responder']">
+                        {{g}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container flex-gt-sm>
+                <label ng-required="true">Gênero</label>
+                <md-select ng-required="true" ng-model="gender">
+                    <md-option ng-repeat="g in ['Homem','Mulher','Não binário', 'Outro', 'Prefiro não Responder']">
+                        {{g}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="block" flex-gt-sm>
+                <label>Estado econômico</label>
+                <md-select ng-required="true" ng-model="economicState">
+                    <md-option
+                    ng-repeat="g in ['Classe baixa','Classe média baixa', 'Classe média', ' Classe média alta', 'Classe alta']   ">
+                    {{g}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container class="block" flex-gt-sm>
+            <label>Cidade</label>
+            <input type="text" name="city" ng-required="true" ng-model="city">
+        </md-input-container>
+
+    </div>
+    
+        <md-card-content layout="column">
+            <h5>Cisgênero: é a pessoa que se identifica com o sexo biológico designado no momento de seu
+                nascimento. </h5>
+
+            <h5>Transgênero: é quem se identifica com um gênero diferente daquele atribuído no nascimento. </h5>
+            <h5> Não-binário: é alguém que não se identifica completamente com o “gênero de nascença” nem com
+                outro gênero.</h5>
+        </md-card-content>
+        <div layout="row">
+            <md-input-container class="block" flex-gt-sm>
+                <label>Instituição de ensino</label>
+                <input type="text" name="institucion" ng-required="true" ng-model="institucion">
+            </md-input-container>
+
+
+            <md-input-container class="block" flex-gt-sm>
+                <label>Nível de escolaridade</label>
+                <md-select ng-required="true" ng-model="educationLevel">
+                    <md-option ng-repeat="g in ['Fundamental','Médio', 'Superior']">
+                        {{g}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            
+            <md-input-container class="block" flex-gt-sm>
+                <label>Série/Ano</label>
+                <input type="number" name="grade" ng-required="true" ng-model="grade">
+            </md-input-container>
+
+        </div>
+
+        <div layout="column">
+            <md-card layout="row" layout-align="center left" flex="auto" width="80%"></md-card>
+            Caso você queira saber mais informação sobre esta pesquisa ou deseja contribuir mais com ela, por favor,
+            informe-nos seu e-mail e/ou WhatsApp:
+            <div layout="row">
+                <md-input-container class="block" flex-gt-sm>
+                    <label>Email</label>
+                    <input type="text" name="email" ng-model="email">
+                </md-input-container>
+                <md-input-container class="block" flex-gt-sm>
+                    <label>Whatsapp</label>
+                    <input type="number" name="whatsapp" ng-model="whatsapp">
+                </md-input-container>
+            </div>
+        </div>
+        <md-card-content>
+    </div>
+    <md-button ng-click="processAnswers()" type="submit" class="md-raised md-primary">Finalizar!
+    </md-button>
+    <span>{{msg}}</span>
+
+    </form>
+    </md-card-content>
+
+
+    </md-card>
+</div>
+</div>

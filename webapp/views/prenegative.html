@@ -1,0 +1,45 @@
+<div layout-padding>
+    <div layout="row" layout-align="center center" >
+        <md-card layout="column" layout-align="center center" flex="auto" width="50%">
+            <md-toolbar layout="row" layout-align="center center" layout-padding class="md-primary md-hue-2">
+                <label> Etapa I - Questionário Inicial </label>
+            </md-toolbar>
+        </md-card>
+    </div>
+    <div layout="row" layout-align="center center" class="bg">
+        <md-card layout="column" layout-align="center center" flex="auto" width="50%">
+            <md-card-title>
+                <p> Instruções: A seguir apresentamos uma lista de pensamentos, os quais você deve ter experienciado no passado. Estime quantas vezes aproximadamente cada pensamento ocorre no seu dia a dia efetuando quaisquer tipos de tarefas.</p>
+            </md-card-title>
+            <md-card-content>
+                <form>
+                    <div ng-repeat="q in questions">
+                        <h3>{{q}}</h3>
+                        <div layout="row">
+                            <style>.espaco label { padding-right: 5px; }</style>
+                            <md-radio-group ng-model="answers[$index]" layout="row" class="md-primary espaco">
+                                <label>Nunca</label>
+                                <md-radio-button value="1" aria-label="option 1"></md-radio-button>
+                                <label>Raramente</label>
+                                <md-radio-button value="2" aria-label="option 2"></md-radio-button>
+                                <label>As vezes</label>
+                                <md-radio-button value="3" aria-label="option 3"></md-radio-button>
+                                <label>Frequentemente</label>
+                                <md-radio-button value="4" aria-label="option 4"></md-radio-button>
+                                <label>Sempre</label>
+                                <md-radio-button value="5" aria-label="option 5"></md-radio-button>
+                            </md-radio-group>
+                            </md-radio-group>
+                        </div>
+                        </p>
+                        </p>
+                        <md-divider></md-divider>
+                    </div>
+                    <md-button ng-click="processAnswers()" type="submit" class="md-raised md-primary">Concluir!</md-button>
+                    <span>{{msg}}</span>
+
+                </form>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>
