@@ -1,5 +1,5 @@
 <div layout-padding>
-    <div layout="row" layout-align="center center" >
+    <div layout="row" layout-align="center center">
         <md-card layout="column" layout-align="center center" flex="auto" width="50%">
             <md-toolbar layout="row" layout-align="center center" layout-padding class="md-primary md-hue-2">
                 <label>Etapa III - Questionário final</label>
@@ -8,25 +8,59 @@
     </div>
     <div layout="row" layout-align="center center" class="bg">
         <md-card layout="column" layout-align="center center" flex="auto" width="50%">
-            <md-card-title>
-                <p> Por favor, responda às seguintes questões com relação à sua experiência na atividade que acabou de finalizar. Não há respostas corretas ou erradas. Pense sobre sua concordância em cada uma das sentenças apresentadas e então marque a opção que melhor representa sua concordância.</p>
+            <md-card-title layout="column">
+                <p> Por favor, responda às seguintes questões com relação à sua experiência na atividade que acabou de
+                    finalizar. Não há respostas corretas ou erradas. Pense sobre sua concordância em cada uma das
+                    sentenças apresentadas e então marque a opção que melhor representa sua concordância.</p>
+                    <p><strong>Marque, para cada pergunta, o número correspondente abaixo para:</strong> </p>
+                    <ul class="nav" style="padding: 10px;">
+                        <div style="padding-left: 5px;">
+                            <li class="nav-item">
+                                <strong >1</strong> - Nunca
+                            </li>
+                        </div>
+                        <div style="padding-left: 10px;">
+                            <li class="nav-item">
+                                <strong >2</strong> - Raramente
+                            </li>
+                        </div>
+                        <div style="padding-left: 10px;">
+                            <li class="nav-item">
+                                <strong >3</strong> - Às vezes
+                            </li>
+                        </div>
+                        <div style="padding-left: 10px;">
+                            <li class="nav-item">
+                                <strong >4</strong> - Frequentemente
+                            </li>
+                        </div>
+                        <div style="padding-left: 10px;">
+                            <li class="nav-item">
+                                <strong >5</strong> - Sempre
+                            </li>
+                        </div>
+                    </ul>
             </md-card-title>
             <md-card-content>
                 <form>
                     <div ng-repeat="q in questions">
-                        <h3>{{q}}</h3>
+                        <h5>{{q}}</h5>
                         <div layout="row">
-                            <style>.espaco label { padding-right: 5px; }</style>
+                            <style>
+                                .espaco label {
+                                    padding-right: 5px;
+                                }
+                            </style>
                             <md-radio-group ng-model="answers[$index]" layout="row" class="md-primary espaco">
-                                <label>Nunca</label>
+                                <label>1</strong></label>
                                 <md-radio-button value="1" aria-label="option 1"></md-radio-button>
-                                <label>Raramente</label>
+                                <label>2</label>
                                 <md-radio-button value="2" aria-label="option 2"></md-radio-button>
-                                <label>As vezes</label>
+                                <label>3</label>
                                 <md-radio-button value="3" aria-label="option 3"></md-radio-button>
-                                <label>Frequentemente</label>
+                                <label>4</label>
                                 <md-radio-button value="4" aria-label="option 4"></md-radio-button>
-                                <label>Sempre</label>
+                                <label>5</label>
                                 <md-radio-button value="5" aria-label="option 5"></md-radio-button>
                             </md-radio-group>
                         </div>
@@ -34,7 +68,8 @@
                         </p>
                         <md-divider></md-divider>
                     </div>
-                    <md-button ng-click="processAnswers()" type="submit" class="md-raised md-primary">Concluir!</md-button>
+                    <md-button ng-click="processAnswers()" type="submit" class="md-raised md-primary">Concluir!
+                    </md-button>
                     <span>{{msg}}</span>
 
                 </form>
