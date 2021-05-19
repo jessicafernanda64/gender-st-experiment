@@ -30,7 +30,7 @@ angular
       
       User.save();
 
-      $location.path("/pretest");
+      $location.path(" /finish");
 
       /** $location.path("/finish"); */
     };

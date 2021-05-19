@@ -1,24 +1,26 @@
-<div layout="column" flex="100" layout-align="center center">
-    <md-card flex="40">
-        <md-card-content>
-            <h1>Resultado:</h1>
-            <div layout="row" layout-align="center center" layout-margin>
-                <div layout="column" layout-align="center center">
-                    <label><b>Meu Nível de Ansiedade</b></label>
-                    <canvas-gauge width="350" under-color="#EFEFEF" over-color="#FF4500" value="userAnxiety" mask="(@)" style="color: gray"></canvas-gauge>
+<div>
+    <div layout="row" layout-align="center center">
+        <md-card layout="column" layout-align="center center" flex="auto" width="50%">
+            <md-toolbar layout="row" layout-align="space-between center" layout-padding class="md-primary md-hue-2">
+                <div layout="column">
+                    <img src="assets/default/images/ufal.png">
                 </div>
-                <div layout="column" layout-align="center center">
-                    <label><b>Outros Usuários</b></label>
-                    <canvas-gauge width="350" under-color="#EFEFEF" over-color="#00D700" value="populationAnxiety" mask="(@)" style="color: gray"></canvas-gauge>
+                <div layout="row" layout-align="center center">
+                    <label>Estudo Sobre os Efeitos dos Estereótipos em Ambientes Gamificados de
+                        Ensino-Aprendizagem</label>
                 </div>
-            </div>
-        </md-card-content>
-    </md-card>
-    <div layout-margin>
-        <span>Contribua ainda mais com este estudo compartilhando-o no Facebook:</span>
-        <div layout="column" layout-align="center center">
-            <div id="shareBtn" class="btnz facebook" ng-click="share()">Compartilhar no Facebook</div>
-            <h2> Obrigado!</h2>
-        </div>
+                <div layout="column" layout-align="end end">
+                    <img src="assets/default/images/ic.png">
+                </div>
+            </md-toolbar>
+            <md-divider>
+                <div layout="column" flex="100" layout-align="center center">
+                    <center>
+                        <h1>Teste finalizado!</h1>
+                        <h3>Agradecemos pela participação!</h3>
+                    </center>
+                </div>
+            </md-divider>
+        </md-card>
     </div>
 </div>
