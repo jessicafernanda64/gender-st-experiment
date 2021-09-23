@@ -34,10 +34,12 @@ angular.module('tutor').controller("PretestCtrl", function($scope, $window, $loc
             console.log(ans);
             console.log("PRETEST: " + sum);
 
-            configService.setTheme(themes[random]);
+            var currTheme = _get("testType") || themes[random];
+
+            configService.setTheme(currTheme);
             User.setGender($scope.gender);
             User.setAge($scope.age);
-            User.setTestType(themes[random]);
+            User.setTestType(currTheme);
             User.setPretestPoints(sum);
             User.setPre(ans);
 
@@ -49,3 +51,7 @@ angular.module('tutor').controller("PretestCtrl", function($scope, $window, $loc
 
     };
 });
+
+function _get(key) {
+    return window.sessionStorage.getItem(key);
+}
